@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Disqus Display-Name Blocker",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Hide Disqus comments by author display name — defeats trolls who keep making new accounts under the same name.",
   "permissions": ["storage"],
   "icons": {

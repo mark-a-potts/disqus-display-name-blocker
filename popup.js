@@ -1,7 +1,7 @@
 // Popup: edit the blocked-name list and options, saved to chrome.storage.sync.
 // The content script listens for these changes and re-applies them live.
 
-const DEFAULTS = { dnb_names: [], dnb_hideCompletely: true, dnb_showBadge: true };
+const DEFAULTS = { dnb_names: ['Reasonable'], dnb_hideCompletely: true, dnb_showBadge: true };
 
 const namesEl  = document.getElementById('names');
 const hideEl   = document.getElementById('hide');

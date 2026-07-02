@@ -24,6 +24,8 @@ It has to be an **extension**, not a userscript, for a specific reason: Disqus r
 - Enter the display names you want to hide, **one per line**, and click **Save**.
 - Changes apply live — no page reload needed.
 
+> It ships with one example name (`Reasonable`) pre-filled so you can see it work immediately. Clear or replace it in the popup with whatever you actually want to block.
+
 **Matching:**
 - A plain line is a **case-insensitive exact** display-name match (e.g. `Reasonable`).
 - Wrap a line in slashes for a **regular expression**, e.g. `/^spammer\d+$/i` to catch `spammer1`, `spammer2`, …

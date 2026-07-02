@@ -17,7 +17,8 @@
   let hideCompletely = true; // false => collapse to a faint clickable stub
   let showBadge = true;
 
-  const DEFAULTS = { dnb_names: [], dnb_hideCompletely: true, dnb_showBadge: true };
+  // First-run defaults (used until the user saves their own list via the popup).
+  const DEFAULTS = { dnb_names: ['Reasonable'], dnb_hideCompletely: true, dnb_showBadge: true };
 
   // Parse one saved line into a matcher. "/foo/i" => regex; anything else => exact.
   function buildMatchers(names) {
