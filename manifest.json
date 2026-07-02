@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Disqus Display-Name Blocker",
+  "version": "1.1.0",
+  "description": "Hide Disqus comments by author display name — defeats trolls who keep making new accounts under the same name.",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Disqus Display-Name Blocker",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://disqus.com/embed/*",
+        "*://*.disqus.com/embed/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle",
+      "js": ["content.js"]
+    }
+  ]
+}

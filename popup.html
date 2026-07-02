@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 14px 16px 16px;
+      font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #1e1e1e;
+      color: #eee;
+    }
+    h1 { font-size: 14px; margin: 0 0 2px; }
+    p.sub { margin: 0 0 12px; color: #aaa; font-size: 12px; }
+    label.field { display: block; font-weight: 600; margin: 0 0 4px; }
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      min-height: 108px;
+      resize: vertical;
+      background: #2a2a2a;
+      color: #eee;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 8px;
+      font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .hint { color: #999; font-size: 11px; margin: 5px 0 12px; }
+    .opts { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+    .opts label { display: flex; align-items: center; gap: 7px; color: #ddd; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    button {
+      background: #c0392b;
+      color: #fff;
+      border: 0;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: #a93226; }
+    #status { color: #6bd06b; font-size: 12px; min-height: 15px; }
+  </style>
+</head>
+<body>
+  <h1>Disqus Display-Name Blocker</h1>
+  <p class="sub">Hide comments by author display name.</p>
+
+  <label class="field" for="names">Blocked names (one per line)</label>
+  <textarea id="names" placeholder="Reasonable&#10;AnnoyingTroll&#10;/^spammer\d+$/i" spellcheck="false"></textarea>
+  <div class="hint">Case-insensitive exact match. Wrap in slashes for a regex, e.g. <code>/^spammer\d+$/i</code>.</div>
+
+  <div class="opts">
+    <label><input type="checkbox" id="hide"> Hide completely (uncheck = collapse to a clickable stub)</label>
+    <label><input type="checkbox" id="badge"> Show the on-page counter badge</label>
+  </div>
+
+  <div class="row">
+    <button id="save">Save</button>
+    <span id="status"></span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
